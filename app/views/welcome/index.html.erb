@@ -1,0 +1,13 @@
+<div id="manage_tasks">
+  <div id="new_task">
+    <input type="text" name="task[title]" id="task_title"/>
+    <button type="submit" id="create_task_button">Create</button>
+  </div>
+  <ul id="tasks">
+  </ul>
+</div>
+<%= content_for :head_scripts do %>
+  <script type="text/template" id="task_view">
+    <a href="/tasks/<%%=id%>" class="task"><%%=title%></a>
+  </script>
+<% end %>
